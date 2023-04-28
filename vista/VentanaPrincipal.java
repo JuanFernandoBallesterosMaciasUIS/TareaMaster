@@ -1,29 +1,37 @@
 package vista;
 
 import javax.swing.JFrame;
+import java.awt.event.WindowAdapter;
 
 public class VentanaPrincipal extends JFrame {
 
+
     // Atributos
+    private PanelTareas panelTareas;
+
+    public VentanaPrincipal() {
+
+        // Definiendo el layout
+        this.setLayout(null);
+
+        // Configuración de los paneles
+
+        // Creación del panel de tareas
+        //panelTareas = new PanelTareas();
+        //panelTareas.setBounds(10, 10, 200, 545);
+        //this.add(panelTareas);
+
+        // Configuración de la ventana
+        this.setTitle("Sistema de Tareas");
+        this.setSize(1000, 600);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Modificado para poder guardar antes de cerrar
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+    }
 
 
-    // Constructor de la clase
-public VentanaPrincipal() {
 
-    // Establecemos el layout de la ventana a null
-    this.setLayout(null);
-
-    // Configuramos la ventana con un título "Sistema de Tareas",
-    // un tamaño de 800x600 píxeles, la acción que realiza al cerrar,
-    // su posición central en la pantalla y la hacemos visible.
-
-    this.setTitle("Sistema de Tareas");
-    this.setSize(800, 600);
-    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.setLocationRelativeTo(null);
-    this.setVisible(true);
-
+    public void addWindowClosingListener(WindowAdapter windowAdapter) {
+        this.addWindowListener(windowAdapter);
     }
 }
-
-// La clase VentanaPrincipal representa una ventana de interfaz gráfica de usuario (GUI) que utiliza la clase JFrame para su construcción. El constructor de la clase establece el diseño de la ventana a null y configura las características de la ventana, como su título, tamaño, posición, etc. para que se adapte al diseño deseado.
