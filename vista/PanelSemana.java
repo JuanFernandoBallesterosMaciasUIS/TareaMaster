@@ -31,31 +31,31 @@ public class PanelSemana extends JPanel{
 
         // Configuración de los botones
         btLunes = new JButton("Lunes");
-        btLunes.setBounds(10, 90, 180, 40);
+        btLunes.setBounds(40, 90, 180, 40);
         this.add(btLunes);
 
         btMartes = new JButton("Martes");
-        btMartes.setBounds(10, 140, 180, 40);
+        btMartes.setBounds(40, 140, 180, 40);
         this.add(btMartes);
 
         btMiercoles = new JButton("Miercoles");
-        btMiercoles.setBounds(10, 190, 180, 40);
+        btMiercoles.setBounds(40, 190, 180, 40);
         this.add(btMiercoles);
 
         btJueves = new JButton("Jueves");
-        btJueves.setBounds(10, 240, 180, 40);
+        btJueves.setBounds(40, 240, 180, 40);
         this.add(btJueves);
 
         btViernes = new JButton("Viernes");
-        btViernes.setBounds(10, 290, 180, 40);
+        btViernes.setBounds(40, 290, 180, 40);
         this.add(btViernes);
 
         btSabado = new JButton("Sabado");
-        btSabado.setBounds(10, 340, 180, 40);
+        btSabado.setBounds(40, 340, 180, 40);
         this.add(btSabado);
 
         btDomingo = new JButton("Domingo");
-        btDomingo.setBounds(10, 390, 180, 40);
+        btDomingo.setBounds(40, 390, 180, 40);
         this.add(btDomingo);
 
 

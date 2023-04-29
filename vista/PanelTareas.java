@@ -40,27 +40,27 @@ public class PanelTareas extends JPanel{
         
         // Configuración de los botones
         btCategoria1 = new JButton("Categoria 1");
-        btCategoria1.setBounds(10, 90, 180, 50);
+        btCategoria1.setBounds(20, 90, 180, 50);
         this.add(btCategoria1);
 
         btCategoria2 = new JButton("Categoria 2");
-        btCategoria2.setBounds(10, 155, 180, 50);
+        btCategoria2.setBounds(20, 155, 180, 50);
         this.add(btCategoria2);
 
         btCategoria3 = new JButton("Categoria 3");
-        btCategoria3.setBounds(10, 220, 180, 50);
+        btCategoria3.setBounds(20, 220, 180, 50);
         this.add(btCategoria3);
 
         btCategoria4 = new JButton("Categoria 4");
-        btCategoria4.setBounds(10, 285, 180, 50);
+        btCategoria4.setBounds(20, 285, 180, 50);
         this.add(btCategoria4);
 
         btCategoria5 = new JButton("Categoria 5");
-        btCategoria5.setBounds(10, 350, 180, 50);
+        btCategoria5.setBounds(20, 350, 180, 50);
         this.add(btCategoria5);
 
         btCategoria6 = new JButton("Categoria 6");
-        btCategoria6.setBounds(10, 415, 180, 50);
+        btCategoria6.setBounds(20, 415, 180, 50);
         this.add(btCategoria6);
 
 

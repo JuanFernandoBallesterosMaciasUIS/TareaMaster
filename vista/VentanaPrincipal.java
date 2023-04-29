@@ -19,13 +19,19 @@ public class VentanaPrincipal extends JFrame {
 
         //Creación y adición del PanelTareas
         PanelTareas panelTareas = new PanelTareas();
-        panelTareas.setBounds(10, 10, 200, 545);
+        panelTareas.setBounds(10, 10, 220, 545);
         this.add(panelTareas);
 
         //Creación y adición del PanelCalendario
         PanelCalendario panelCalendario = new PanelCalendario();
         panelCalendario.setBounds(500, 10, 480, 545);
         this.add(panelCalendario);
+
+        //Creación y adición del PanelSemana
+        PanelSemana panelSemana = new PanelSemana();
+        panelSemana.setBounds(240, 10, 250, 545);
+        this.add(panelSemana);
+        
 
     
 
