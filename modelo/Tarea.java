@@ -1,8 +1,9 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Tarea {
+public class Tarea implements Serializable {
 
     // Atributos
     private String titulo;
