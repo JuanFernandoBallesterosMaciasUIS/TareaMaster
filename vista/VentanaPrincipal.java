@@ -7,6 +7,7 @@ public class VentanaPrincipal extends JFrame {
 
 
     // Atributos
+
     //private PanelTareas panelTareas;
 
     public VentanaPrincipal() {
@@ -15,17 +16,18 @@ public class VentanaPrincipal extends JFrame {
         this.setLayout(null);
 
         // Configuración de los paneles
+
+        //Creación y adición del PanelTareas
+        PanelTareas panelTareas = new PanelTareas();
+        panelTareas.setBounds(10, 10, 200, 545);
+        this.add(panelTareas);
+
         //Creación y adición del PanelCalendario
         PanelCalendario panelCalendario = new PanelCalendario();
         panelCalendario.setBounds(500, 10, 480, 545);
         this.add(panelCalendario);
 
-        
-
-        // Creación del panel de tareas
-        //panelTareas = new PanelTareas();
-        //panelTareas.setBounds(10, 10, 200, 545);
-        //this.add(panelTareas);
+    
 
         // Configuración de la ventana
         this.setTitle("Sistema de Tareas");
