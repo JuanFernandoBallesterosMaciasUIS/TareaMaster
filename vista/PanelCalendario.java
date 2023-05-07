@@ -15,7 +15,8 @@ public class PanelCalendario extends JPanel{
 
 
     // Atributos
-    private JButton btCalenda;
+    private JButton btCalendario;
+    private JTextArea areaTexto;
 
     public PanelCalendario() {
 
@@ -23,7 +24,7 @@ public class PanelCalendario extends JPanel{
         this.setLayout(null);
 
         //Crear y agregar area de texto Resultados con un borde llamado Tareas
-        JTextArea areaTexto = new JTextArea();
+        areaTexto = new JTextArea();
         areaTexto.setBounds(10, 350, 460, 190);
         areaTexto.setBorder(BorderFactory.createTitledBorder("Recomendaciones"));
         this.add(areaTexto);
@@ -36,27 +37,28 @@ public class PanelCalendario extends JPanel{
 
 
         // Configuración del boton 1
-        btCalenda = new JButton("");
-        btCalenda.setBounds(110, 90, 270, 245);
-        this.add(btCalenda);
+        btCalendario = new JButton("");
+        btCalendario.setBounds(110, 90, 270, 245);
+        btCalendario.setActionCommand("calendario");
+        this.add(btCalendario);
 
         //codigo para ponerle la imagen mayo.jpg al boton 1 
         ImageIcon icono = new ImageIcon("mayo.jpg");
-        btCalenda.setIcon(icono);
+        btCalendario.setIcon(icono);
 
         //Definición del contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);
-
- 
-
-
-
-        
-        
-
+        this.setBackground(Color.WHITE);       
 
     }
+
+    // Método para agregar oyentes a los botones
+    public void agregarOyentesBotones(ActionListener pAL)
+    {
+        btCalendario.addActionListener(pAL);
+        
+    }
+
 
 
     

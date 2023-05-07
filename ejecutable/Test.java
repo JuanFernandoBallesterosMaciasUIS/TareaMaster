@@ -12,7 +12,7 @@ public class Test {
         
         SistemaDeTareas sistemaDeTareas = new SistemaDeTareas();
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
-        Controlador controlador = new Controlador(sistemaDeTareas, ventanaPrincipal);
+        Controlador controlador = new Controlador(ventanaPrincipal, sistemaDeTareas);
 
         ventanaPrincipal.addWindowClosingListener(new WindowAdapter() {
             @Override

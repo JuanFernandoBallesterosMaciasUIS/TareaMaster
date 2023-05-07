@@ -1,12 +1,19 @@
 package vista;
 
 import javax.swing.JFrame;
+
+import java.awt.Panel;
 import java.awt.event.WindowAdapter;
+
 
 public class VentanaPrincipal extends JFrame {
 
 
     // Atributos
+    public DialogoCalendario miDialogoCalendario;
+    public PanelCalendario miPanelCalendario;
+    public PanelSemana miPanelSemana;
+    public PanelTareas miPanelTareas;
 
     //private PanelTareas panelTareas;
 
@@ -18,22 +25,19 @@ public class VentanaPrincipal extends JFrame {
         // Configuración de los paneles
 
         //Creación y adición del PanelTareas
-        PanelTareas panelTareas = new PanelTareas();
-        panelTareas.setBounds(10, 10, 220, 545);
-        this.add(panelTareas);
-
+        miPanelTareas = new PanelTareas();
+        miPanelTareas.setBounds(10, 10, 220, 545);
+        this.add(miPanelTareas);
+        
         //Creación y adición del PanelCalendario
-        PanelCalendario panelCalendario = new PanelCalendario();
-        panelCalendario.setBounds(500, 10, 480, 545);
-        this.add(panelCalendario);
+        miPanelCalendario= new PanelCalendario();
+        miPanelCalendario.setBounds(500, 10, 480, 545);
+        this.add(miPanelCalendario);
 
         //Creación y adición del PanelSemana
-        PanelSemana panelSemana = new PanelSemana();
-        panelSemana.setBounds(240, 10, 250, 545);
-        this.add(panelSemana);
-        
-
-    
+        miPanelSemana = new PanelSemana();
+        miPanelSemana.setBounds(240, 10, 250, 545);
+        this.add(miPanelSemana);
 
         // Configuración de la ventana
         this.setTitle("Sistema de Tareas");
@@ -48,4 +52,12 @@ public class VentanaPrincipal extends JFrame {
     public void addWindowClosingListener(WindowAdapter windowAdapter) {
         this.addWindowListener(windowAdapter);
     }
+
+    //Crear Dialogo AgregarVendedor
+    public void crearDialogoCalendario()
+    {
+        miDialogoCalendario = new DialogoCalendario();
+    }
+
+
 }
