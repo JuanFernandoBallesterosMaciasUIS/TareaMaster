@@ -11,6 +11,7 @@ public class VentanaPrincipal extends JFrame {
 
     // Atributos
     public DialogoCalendario miDialogoCalendario;
+    public DialogoCategoria miDialogoCategoria;
     public PanelCalendario miPanelCalendario;
     public PanelSemana miPanelSemana;
     public PanelTareas miPanelTareas;
@@ -57,6 +58,12 @@ public class VentanaPrincipal extends JFrame {
     public void crearDialogoCalendario()
     {
         miDialogoCalendario = new DialogoCalendario();
+    }
+
+    // Dialogo Categoria
+    public void crearDialogoCategoria()
+    {
+        miDialogoCategoria = new DialogoCategoria();
     }
 
 

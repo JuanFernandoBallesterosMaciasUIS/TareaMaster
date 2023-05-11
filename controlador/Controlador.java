@@ -21,6 +21,7 @@ public class Controlador implements ActionListener
         this.sistemaDeTareas = pSistemaDeTareas;
         this.vistaPrincipal = pVistaPrincipal;
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
+        this.vistaPrincipal.miPanelTareas.addOyente(this);
 
     }
     // Métodos para interactuar entre el sistemaDeTareas y la vista
@@ -35,6 +36,13 @@ public class Controlador implements ActionListener
         {
             vistaPrincipal.crearDialogoCalendario();
             vistaPrincipal.miDialogoCalendario.agregarOyenteBoton(this);
+        }
+
+        //Abrir ventana Editar Categoria
+        if(comando.equals("modificarCategorias"))
+        {
+            vistaPrincipal.crearDialogoCategoria();
+            vistaPrincipal.miDialogoCategoria.agregarOyenteBoton(this);
         }
     }
 }

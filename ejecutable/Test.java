@@ -14,6 +14,10 @@ public class Test {
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
         Controlador controlador = new Controlador(ventanaPrincipal, sistemaDeTareas);
 
+        
+
+        
+
         ventanaPrincipal.addWindowClosingListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -21,5 +25,6 @@ public class Test {
                 System.exit(0); // Finalizar el programa después de guardar las tareas
             }
         });
+
     }
 }
