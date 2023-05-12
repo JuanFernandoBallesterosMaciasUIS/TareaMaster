@@ -37,13 +37,15 @@ public class DialogoCalendario extends JDialog {
         this.add(TareasSinHacer);
 
         //Creación del botón del mes anterior
-        btMesAnterior = new JButton("Anterior mes");
-        btMesAnterior.setBounds(320, 500, 120, 20);
+        btMesAnterior = new JButton("Mes anterior");
+        btMesAnterior.setFont(new Font("Verdana", Font.BOLD, 12));
+        btMesAnterior.setBounds(320, 500, 130, 20);
         this.add(btMesAnterior);
 
         //Creación del botón del mes siguiente
-        btMesSiguiente = new JButton("Siguiente mes");
-        btMesSiguiente.setBounds(920, 500, 120, 20);
+        btMesSiguiente = new JButton("Mes siguiente");
+        btMesSiguiente.setFont(new Font("Verdana", Font.BOLD, 12));
+        btMesSiguiente.setBounds(920, 500, 130, 20);
         this.add(btMesSiguiente);
 
 

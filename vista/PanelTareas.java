@@ -33,7 +33,7 @@ public class PanelTareas extends JPanel{
 
         // Crear un objeto TitledBorder con una fuente y tamaño de fuente personalizados
         Font font = new Font("Arial", Font.BOLD, 17); 
-
+        
         TitledBorder border = BorderFactory.createTitledBorder(null, "Tareas", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, font, Color.decode("#20124D"));
 
         // Asignar el borde personalizado al panel

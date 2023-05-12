@@ -40,14 +40,14 @@ public class DialogoCategoria extends JDialog {
 
         // Creación de una forma simetrica
 
-        //Creación del botón editar categoria
+        //Creación del botón editar categoria-
         btEditarCategoria = new JButton("Editar");
         btEditarCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
         btEditarCategoria.setBounds(100, 120, 100, 25);
     
         this.add(btEditarCategoria);
 
-        //Creación de la etiqueta categoria
+        //Creación de la etiqueta categoria-
         lbCategoria = new Label("Categoria:");
         lbCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
         lbCategoria.setBounds(49, 30, 80, 25);
@@ -75,7 +75,7 @@ public class DialogoCategoria extends JDialog {
 
         //Creación del textfield nombre
         txtNombre = new JTextField();
-        txtNombre.setFont(new Font("Arial", Font.PLAIN, 15));
+        txtNombre.setFont(new Font("Arial", Font.BOLD, 15));
         txtNombre.setBounds(130, 70, 120, 25);
         this.add(txtNombre);
 
