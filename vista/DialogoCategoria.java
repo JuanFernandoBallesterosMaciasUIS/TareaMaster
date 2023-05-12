@@ -1,5 +1,5 @@
 package vista;
-
+import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -42,18 +42,21 @@ public class DialogoCategoria extends JDialog {
 
         //Creación del botón editar categoria
         btEditarCategoria = new JButton("Editar");
+        btEditarCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
         btEditarCategoria.setBounds(100, 120, 100, 25);
         this.add(btEditarCategoria);
 
         //Creación de la etiqueta categoria
         lbCategoria = new Label("Categoria:");
-        lbCategoria.setBounds(50, 30, 80, 25);
+        lbCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
+        lbCategoria.setBounds(49, 30, 80, 25);
         this.add(lbCategoria);
 
         
         //Creación del combobox categoria y agregar las categorias existentes
         cbCategoria = new JComboBox();
         cbCategoria.setBounds(130, 30, 120, 25);
+        cbCategoria.setFont(new Font("Arial", Font.PLAIN, 15));
         cbCategoria.addItem(panelTareas.getBtCategoria1());
         cbCategoria.addItem(panelTareas.getBtCategoria2());
         cbCategoria.addItem(panelTareas.getBtCategoria3());
@@ -64,11 +67,14 @@ public class DialogoCategoria extends JDialog {
 
         //Creación de la etiqueta nombre
         lbNombre = new Label("Nombre:");
+        lbNombre.setFont(new Font("Verdana", Font.BOLD, 15));
+        
         lbNombre.setBounds(50, 70, 80, 25);
         this.add(lbNombre);
 
         //Creación del textfield nombre
         txtNombre = new JTextField();
+        txtNombre.setFont(new Font("Arial", Font.PLAIN, 15));
         txtNombre.setBounds(130, 70, 120, 25);
         this.add(txtNombre);
 
@@ -80,6 +86,7 @@ public class DialogoCategoria extends JDialog {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
+
 
     }
 

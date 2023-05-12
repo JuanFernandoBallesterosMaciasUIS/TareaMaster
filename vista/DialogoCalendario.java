@@ -1,5 +1,6 @@
 package vista;
 
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -36,12 +37,12 @@ public class DialogoCalendario extends JDialog {
         this.add(TareasSinHacer);
 
         //Creación del botón del mes anterior
-        btMesAnterior = new JButton("Mes anterior");
+        btMesAnterior = new JButton("Anterior mes");
         btMesAnterior.setBounds(320, 500, 120, 20);
         this.add(btMesAnterior);
 
         //Creación del botón del mes siguiente
-        btMesSiguiente = new JButton("Mes siguiente");
+        btMesSiguiente = new JButton("Siguiente mes");
         btMesSiguiente.setBounds(920, 500, 120, 20);
         this.add(btMesSiguiente);
 
@@ -92,18 +93,11 @@ public class DialogoCalendario extends JDialog {
         this.add(diasSemana[6]);
 
         // Creacion del label del mes de Junio 
-        JLabel mes = new JLabel("Junio");
-        mes.setBounds(500, 20, 120, 40);
-
+        JLabel mes = new JLabel("- Junio -"); // Creación del label
+        mes.setBounds(500, 20, 120, 40); // Ajusta la posición del label
         // Ajusta el tamaño de la fuente
-        mes.setFont(new Font("Arial", Font.PLAIN, 24));
-
-        this.add(mes);
-
-        
-        
-
-        
+        mes.setFont(new Font("Arial", Font.PLAIN, 30));
+        this.add(mes); // Agrega el label a la ventana
 
 
         //Caracteristicas de la ventana

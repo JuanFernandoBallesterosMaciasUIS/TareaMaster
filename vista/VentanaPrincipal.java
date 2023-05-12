@@ -41,13 +41,13 @@ public class VentanaPrincipal extends JFrame {
         this.add(miPanelSemana);
 
         // Configuración de la ventana
-        this.setTitle("Sistema de Tareas");
+        this.setTitle("Sistema de tareas - TareaMaster");
         this.setSize(1000, 600);
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Modificado para poder guardar antes de cerrar
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-    }
 
+    }
 
 
     public void addWindowClosingListener(WindowAdapter windowAdapter) {

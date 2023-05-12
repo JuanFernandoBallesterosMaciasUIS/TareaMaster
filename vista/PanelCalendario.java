@@ -1,6 +1,7 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,14 +27,19 @@ public class PanelCalendario extends JPanel{
         //Crear y agregar area de texto Resultados con un borde llamado Tareas
         areaTexto = new JTextArea();
         areaTexto.setBounds(10, 350, 460, 190);
-        areaTexto.setBorder(BorderFactory.createTitledBorder("Recomendaciones"));
+        areaTexto.setBorder(BorderFactory.createTitledBorder(null, "Recomendaciones", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Arial", Font.BOLD, 17), Color.decode("#20124D")));
         this.add(areaTexto);
-
+        areaTexto.setBackground(Color.decode ("#e9e9e9"));
 
 
         // Configuración del panel calendario
-        this.setBackground(Color.WHITE);
-        this.setBorder(BorderFactory.createTitledBorder(null, "Calendario", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, Color.BLACK));
+        this.setBackground(Color.decode ("#D4D7E9"));
+
+        // Crear un objeto TitledBorder con una fuente y tamaño de fuente personalizados
+        Font font = new Font("Arial", Font.BOLD, 17); 
+        TitledBorder border = BorderFactory.createTitledBorder(null, "Calendario", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, font, Color.decode("#20124D"));
+        // Asignar el borde personalizado al panel
+        this.setBorder(border);
 
 
         // Configuración del boton 1
@@ -48,7 +54,7 @@ public class PanelCalendario extends JPanel{
 
         //Definición del contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.WHITE);       
+        this.setBackground(Color.decode ("#D4D7E9"));       
 
     }
 
