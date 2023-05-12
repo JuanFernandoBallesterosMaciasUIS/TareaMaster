@@ -74,7 +74,7 @@ public class DialogoCategoria extends JDialog {
 
         //Creación del textfield nombre
         txtNombre = new JTextField();
-        txtNombre.setFont(new Font("Arial", Font.PLAIN, 15));
+        txtNombre.setFont(new Font("Arial", Font.BOLD, 15));
         txtNombre.setBounds(130, 70, 120, 25);
         this.add(txtNombre);
 

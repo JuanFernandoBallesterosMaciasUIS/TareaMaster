@@ -13,6 +13,8 @@ public class Test {
         SistemaDeTareas sistemaDeTareas = new SistemaDeTareas();
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
         Controlador controlador = new Controlador(ventanaPrincipal, sistemaDeTareas);
+    
+        
 
         
 

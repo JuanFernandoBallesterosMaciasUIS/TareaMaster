@@ -44,5 +44,7 @@ public class Controlador implements ActionListener
             vistaPrincipal.crearDialogoCategoria();
             vistaPrincipal.miDialogoCategoria.agregarOyenteBoton(this);
         }
+
+    
     }
 }
