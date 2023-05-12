@@ -44,6 +44,7 @@ public class DialogoCategoria extends JDialog {
         btEditarCategoria = new JButton("Editar");
         btEditarCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
         btEditarCategoria.setBounds(100, 120, 100, 25);
+    
         this.add(btEditarCategoria);
 
         //Creación de la etiqueta categoria
@@ -96,6 +97,12 @@ public class DialogoCategoria extends JDialog {
     {
         return btEditarCategoria;
     }
+
+    public String getTxtCategoria()
+    {
+        return cbCategoria.getSelectedItem().toString();
+    }
+
     public void agregarOyenteBoton(ActionListener pAL)
     {
         btEditarCategoria.addActionListener(pAL);
