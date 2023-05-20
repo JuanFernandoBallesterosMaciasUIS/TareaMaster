@@ -1,14 +1,15 @@
 package vista;
 
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DialogoJunio extends JPanel {
@@ -19,7 +20,7 @@ public class DialogoJunio extends JPanel {
     
     private JButton btMesAnterior;
     private JButton btMesSiguiente;
-    private JTextArea TareasSinHacer;
+    private JTextArea tareasSinHacer;
     
     //----------------------
     // Metodos
@@ -30,10 +31,10 @@ public class DialogoJunio extends JPanel {
         this.setLayout(null);
 
         //Crear y agregar area de texto con un borde llamado Tareas no realizadas
-        TareasSinHacer = new JTextArea();
-        TareasSinHacer.setBounds(30, 90, 200, 300);
-        TareasSinHacer.setBorder(BorderFactory.createTitledBorder("Tareas no realizadas"));
-        this.add(TareasSinHacer);
+        tareasSinHacer = new JTextArea();
+        tareasSinHacer.setBounds(30, 90, 200, 300);
+        tareasSinHacer.setBorder(BorderFactory.createTitledBorder("Tareas no realizadas"));
+        this.add(tareasSinHacer);
 
         //Creación del botón del mes anterior
         btMesAnterior = new JButton("Mes anterior");
@@ -46,8 +47,7 @@ public class DialogoJunio extends JPanel {
         btMesSiguiente.setFont(new Font("Verdana", Font.BOLD, 12));
         btMesSiguiente.setBounds(920, 500, 130, 20);
         this.add(btMesSiguiente);
-
-
+        
         // Creacion del calendario como una matriz de botones que cada boton muestre el numero del dia hasta 31 botones
         JButton[] calendario = new JButton[30];
         int x = 0;
@@ -59,7 +59,13 @@ public class DialogoJunio extends JPanel {
             calendario[dia].setText("" + (dia + 1));
             calendario[dia].setHorizontalAlignment(SwingConstants.LEFT); // Alineación horizontal
             calendario[dia].setVerticalAlignment(SwingConstants.TOP); // Alineación vertical
-            this.add(calendario[dia]);
+            calendario[dia].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    mostrarVentana();
+                }
+            });
+            this.add(calendario[dia]);// Ventanas de cada día del calendario
         
             x += 120;
             if ((dia + 1) % 7 == 0) // al llegar a 7 botones, iniciar una nueva línea
@@ -73,12 +79,12 @@ public class DialogoJunio extends JPanel {
         JLabel[] diasSemana = new JLabel[7];
         diasSemana[0] = new JLabel("Lunes");
         diasSemana[1] = new JLabel("Martes");
-        diasSemana[2] = new JLabel("Miercoles");
+        diasSemana[2] = new JLabel("Miércoles");
         diasSemana[3] = new JLabel("Jueves");
         diasSemana[4] = new JLabel("Viernes");
-        diasSemana[5] = new JLabel("Sabado");
+        diasSemana[5] = new JLabel("Sábado");
         diasSemana[6] = new JLabel("Domingo");
-        diasSemana[0].setBounds(250, 70,120, 20);
+        diasSemana[0].setBounds(250, 70, 120, 20);
         diasSemana[1].setBounds(370, 70, 120, 20);
         diasSemana[2].setBounds(490, 70, 120, 20);
         diasSemana[3].setBounds(610, 70, 120, 20);
@@ -106,6 +112,21 @@ public class DialogoJunio extends JPanel {
         
     }
 
+    private void mostrarVentana() {
+        JDialog ventana = new JDialog();
+        ventana.setTitle("Ventana de botón");
+        ventana.setSize(600, 400);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        ventana.setVisible(true);
+
+        // Mostrar el DialogoVistaDatosDia
+        DialogoVistaDatosDia dialogo = new DialogoVistaDatosDia();
+        ventana.add(dialogo);
+
+
+    }
+
     //Metodos de acceso
 
     public JButton getBtMesAnterior() 
@@ -127,7 +148,7 @@ public class DialogoJunio extends JPanel {
     {
         btMesSiguiente.addActionListener(pAL);
     }
-} 
+}
 
     
 
