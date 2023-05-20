@@ -50,7 +50,8 @@ public class Controlador implements ActionListener
         {
             int nombreCategoria = vistaPrincipal.miDialogoCategoria.getCbCategoria();
             String nombreNuevo = vistaPrincipal.miDialogoCategoria.getTxtNombre();
-            vistaPrincipal.miDialogoCategoria.editarCategoria(nombreCategoria, nombreNuevo);
+            vistaPrincipal.miPanelTareas.cambiarNombreCategoria(nombreCategoria + 1, nombreNuevo);
+            vistaPrincipal.miDialogoCategoria.editarCategoria2();
             vistaPrincipal.miDialogoCategoria.dispose();
         }
 

@@ -103,12 +103,27 @@ public class DialogoCategoria extends JDialog {
         return cbCategoria.getSelectedIndex();
     }
 
-    // Metodos de modificacion, obtiene el indice de la categoria y el nombre nuevo y lo cambia en el combobox
-    public void editarCategoria(int pNombre, String pNombreNuevo)
-    {
-        cbCategoria.removeItemAt(pNombre);
-        cbCategoria.insertItemAt(pNombreNuevo, pNombre);
+    public void setCbCategoria(JComboBox cbCategoria) {
+        this.cbCategoria = cbCategoria;
     }
+
+    // Metodos de modificacion, obtiene el indice de la categoria y el nombre nuevo y lo cambia en el combobox
+    public void editarCategoria2()
+    {
+        cbCategoria.setSelectedItem(panelTareas.getBtCategoria1());
+        cbCategoria.addItem(panelTareas.getBtCategoria2());
+        cbCategoria.addItem(panelTareas.getBtCategoria3());
+        cbCategoria.addItem(panelTareas.getBtCategoria4());
+        cbCategoria.addItem(panelTareas.getBtCategoria5());
+        cbCategoria.addItem(panelTareas.getBtCategoria6());
+    }
+
+    public void editarCategoria(int indice, String nombreNuevo) {
+        // Modificar el nombre de la categoria en el combobox
+        cbCategoria.removeItemAt(indice);
+        cbCategoria.insertItemAt(nombreNuevo, indice);
+    }
+    
     public void agregarOyenteBoton(ActionListener pAL)
     {
         btEditarCategoria.addActionListener(pAL);

@@ -111,7 +111,7 @@ public class PanelTareas extends JPanel{
         btCategoria6.setText(pNombreCategoria);
     }
 
-    // Métodos para obtener el texto de los botones
+
 
     public String getBtCategoria1() {
         return btCategoria1.getText();
@@ -136,6 +136,35 @@ public class PanelTareas extends JPanel{
     public String getBtCategoria6() {
         return btCategoria6.getText();
     }
+
+    
+    // Método cambiar el texto de los botones categorias 1 al 6
+    public void cambiarNombreCategoria(int pCategoria, String pNombre) {
+        switch (pCategoria) {
+            case 1:
+                setBtCategoria1(pNombre);
+                break;
+            case 2:
+                setBtCategoria2(pNombre);
+                break;
+            case 3:
+                setBtCategoria3(pNombre);
+                break;
+            case 4:
+                setBtCategoria4(pNombre);
+                break;
+            case 5:
+                setBtCategoria5(pNombre);
+                break;
+            case 6:
+                setBtCategoria6(pNombre);
+                break;
+            default:
+                break;
+        }
+    }
+
+
 
 
 
