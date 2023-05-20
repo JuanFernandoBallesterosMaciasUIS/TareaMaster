@@ -44,7 +44,7 @@ public class DialogoCategoria extends JDialog {
         btEditarCategoria = new JButton("Editar");
         btEditarCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
         btEditarCategoria.setBounds(100, 120, 100, 25);
-    
+        btEditarCategoria.setActionCommand("editar");
         this.add(btEditarCategoria);
 
         //Creación de la etiqueta categoria-
@@ -93,16 +93,22 @@ public class DialogoCategoria extends JDialog {
 
     //Metodos de acceso
 
-    public JButton getBtEditarCategoria() 
+    public String getTxtNombre()
     {
-        return btEditarCategoria;
+        return txtNombre.getText();
+    }
+    
+    public int getCbCategoria()
+    {
+        return cbCategoria.getSelectedIndex();
     }
 
-    public String getTxtCategoria()
+    // Metodos de modificacion, obtiene el indice de la categoria y el nombre nuevo y lo cambia en el combobox
+    public void editarCategoria(int pNombre, String pNombreNuevo)
     {
-        return cbCategoria.getSelectedItem().toString();
+        cbCategoria.removeItemAt(pNombre);
+        cbCategoria.insertItemAt(pNombreNuevo, pNombre);
     }
-
     public void agregarOyenteBoton(ActionListener pAL)
     {
         btEditarCategoria.addActionListener(pAL);

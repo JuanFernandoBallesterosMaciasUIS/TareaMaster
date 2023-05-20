@@ -45,6 +45,15 @@ public class Controlador implements ActionListener
             vistaPrincipal.miDialogoCategoria.agregarOyenteBoton(this);
         }
 
+        // editar categoria
+        if(comando.equals("editar"))
+        {
+            int nombreCategoria = vistaPrincipal.miDialogoCategoria.getCbCategoria();
+            String nombreNuevo = vistaPrincipal.miDialogoCategoria.getTxtNombre();
+            vistaPrincipal.miDialogoCategoria.editarCategoria(nombreCategoria, nombreNuevo);
+            vistaPrincipal.miDialogoCategoria.dispose();
+        }
+
     
     }
 }
