@@ -3,16 +3,15 @@ package vista;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import java.awt.Font;
 import java.awt.event.ActionListener;
 
-public class DialogoCalendario extends JDialog {
+public class DialogoJunio extends JPanel {
 
     //----------------------
     // Atributos
@@ -21,11 +20,11 @@ public class DialogoCalendario extends JDialog {
     private JButton btMesAnterior;
     private JButton btMesSiguiente;
     private JTextArea TareasSinHacer;
-
+    
     //----------------------
     // Metodos
     //----------------------
-    public DialogoCalendario()
+    public DialogoJunio()
     {
         //Definición del layout del Dialogo
         this.setLayout(null);
@@ -79,7 +78,7 @@ public class DialogoCalendario extends JDialog {
         diasSemana[4] = new JLabel("Viernes");
         diasSemana[5] = new JLabel("Sabado");
         diasSemana[6] = new JLabel("Domingo");
-        diasSemana[0].setBounds(250, 70, 120, 20);
+        diasSemana[0].setBounds(250, 70,120, 20);
         diasSemana[1].setBounds(370, 70, 120, 20);
         diasSemana[2].setBounds(490, 70, 120, 20);
         diasSemana[3].setBounds(610, 70, 120, 20);
@@ -101,13 +100,10 @@ public class DialogoCalendario extends JDialog {
         mes.setFont(new Font("Arial", Font.PLAIN, 30));
         this.add(mes); // Agrega el label a la ventana
 
-
-        //Caracteristicas de la ventana
-        this.setTitle("Calendario");
+        //Caracteristicas de la ventana , nombre , tamaño , posicion , no redimensionable y visible
         this.setSize(1150,570);
-        this.setLocationRelativeTo(null);
-        this.setResizable(false);
         this.setVisible(true);
+        
     }
 
     //Metodos de acceso
@@ -131,12 +127,7 @@ public class DialogoCalendario extends JDialog {
     {
         btMesSiguiente.addActionListener(pAL);
     }
-
-    public void cerrarDialogoAgregarVendedor()
-    {
-        this.dispose();
-    }
-}
+} 
 
     
 

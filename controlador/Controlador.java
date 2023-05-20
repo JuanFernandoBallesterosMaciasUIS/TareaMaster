@@ -34,8 +34,8 @@ public class Controlador implements ActionListener
         //Abrir ventana Agregar vendedor
         if(comando.equals("calendario"))
         {
-            vistaPrincipal.crearDialogoCalendario();
-            vistaPrincipal.miDialogoCalendario.agregarOyenteBoton(this);
+            vistaPrincipal.crearDialogoVistaCalenda();
+            
         }
 
         //Abrir ventana Editar Categoria

@@ -10,7 +10,8 @@ public class VentanaPrincipal extends JFrame {
 
 
     // Atributos
-    public DialogoCalendario miDialogoCalendario;
+    public DialogoVistaCalenda miDialogoVistaCalenda;
+    public DialogoJunio miDialogoCalendario;
     public DialogoCategoria miDialogoCategoria;
 
     public PanelCalendario miPanelCalendario;
@@ -47,9 +48,8 @@ public class VentanaPrincipal extends JFrame {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Modificado para poder guardar antes de cerrar
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-
+        
     }
-
 
     public void addWindowClosingListener(WindowAdapter windowAdapter) {
         this.addWindowListener(windowAdapter);
@@ -58,7 +58,13 @@ public class VentanaPrincipal extends JFrame {
     //Crear Dialogo AgregarVendedor
     public void crearDialogoCalendario()
     {
-        miDialogoCalendario = new DialogoCalendario();
+        miDialogoCalendario = new DialogoJunio();
+    }
+
+    // Dialogo Vista Calendario
+    public void crearDialogoVistaCalenda()
+    {
+        miDialogoVistaCalenda = new DialogoVistaCalenda();
     }
 
     // Dialogo Categoria
