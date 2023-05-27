@@ -58,15 +58,9 @@ public class Controlador implements ActionListener
         //Agregar tarea
         if(comando.equals("Categoria1"))
         {
-            //String titulo = vistaPrincipal.miPanelAgregarTarea.getTxtTitulo();
-            //String descripcion = vistaPrincipal.miPanelAgregarTarea.getTxtDescripcion();
-            //String categoria = vistaPrincipal.miPanelAgregarTarea.getTxtCategoria();
-            //int prioridad = vistaPrincipal.miPanelAgregarTarea.getTxtPrioridad();
-            //String plazo = vistaPrincipal.miPanelAgregarTarea.getTxtPlazo();
-            //Tarea nuevaTarea = new Tarea(titulo, descripcion, categoria, prioridad, plazo);
-            vistaPrincipal.crearDialogoAgregarTarea();
+
             vistaPrincipal.miPanelAgregarTarea.agregarOyenteBoton(this);
-            //vistaPrincipal.miPanelAgregarTarea.limpiarCampos();
+
         }
 
     

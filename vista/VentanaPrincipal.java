@@ -63,10 +63,12 @@ public class VentanaPrincipal extends JFrame {
     }
 
     // Crear Dialogo Agregar Tarea
+    // Suponiendo que 'this' es un JFrame
     public void crearDialogoAgregarTarea()
     {
-        miPanelAgregarTarea = new PanelAgregarTarea();
+        miPanelAgregarTarea = new PanelAgregarTarea(this);
     }
+
 
     // Dialogo Vista Calendario
     public void crearDialogoVistaCalenda()
