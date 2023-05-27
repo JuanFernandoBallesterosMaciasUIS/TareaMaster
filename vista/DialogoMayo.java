@@ -1,6 +1,6 @@
 package vista;
 
-
+import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -35,6 +35,8 @@ public class DialogoMayo extends JPanel {
         TareasSinHacer = new JTextArea();
         TareasSinHacer.setBounds(30, 90, 200, 300);
         TareasSinHacer.setBorder(BorderFactory.createTitledBorder("Tareas no realizadas"));
+        // se agrega el color del panel 
+        TareasSinHacer.setBackground(Color.decode("#D4D7E9"));
         this.add(TareasSinHacer);
 
         //Creación del botón del mes anterior
@@ -104,6 +106,8 @@ public class DialogoMayo extends JPanel {
 
         // Creacion del label del mes de Junio 
         JLabel mes = new JLabel("- Mayo -"); // Creación del label
+        // color de la letra
+        mes.setForeground(Color.decode("#092c86"));
         mes.setBounds(500, 20, 120, 40); // Ajusta la posición del label
         // Ajusta el tamaño de la fuente
         mes.setFont(new Font("Arial", Font.PLAIN, 30));
