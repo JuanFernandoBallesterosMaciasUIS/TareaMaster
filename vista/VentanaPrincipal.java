@@ -67,7 +67,9 @@ public class VentanaPrincipal extends JFrame {
     public void crearDialogoAgregarTarea()
     {
         miPanelAgregarTarea = new PanelAgregarTarea(this);
+        miPanelAgregarTarea.setVisible(true);
     }
+
 
 
     // Dialogo Vista Calendario

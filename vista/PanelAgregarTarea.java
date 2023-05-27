@@ -97,6 +97,8 @@ public class PanelAgregarTarea extends JDialog {
         txtPlazo.setBounds(130, 120, 120, 25);
         txtPlazo.setFont(new Font("Arial", Font.PLAIN, 15));
         this.add(txtPlazo);
+
+     
     }
 
     public void agregarOyenteBoton(ActionListener pAL)

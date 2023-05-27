@@ -59,7 +59,7 @@ public class Controlador implements ActionListener
         if(comando.equals("Categoria1"))
         {
 
-            vistaPrincipal.miPanelAgregarTarea.agregarOyenteBoton(this);
+            vistaPrincipal.crearDialogoAgregarTarea();
 
         }
 
