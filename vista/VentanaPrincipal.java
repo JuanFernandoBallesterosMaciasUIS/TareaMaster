@@ -13,10 +13,10 @@ public class VentanaPrincipal extends JFrame {
     public DialogoVistaCalenda miDialogoVistaCalenda;
     public DialogoJunio miDialogoCalendario;
     public DialogoCategoria miDialogoCategoria;
-
     public PanelCalendario miPanelCalendario;
     public PanelSemana miPanelSemana;
     public PanelTareas miPanelTareas;
+    public PanelAgregarTarea miPanelAgregarTarea;
 
     //private PanelTareas panelTareas;
 
@@ -42,6 +42,7 @@ public class VentanaPrincipal extends JFrame {
         miPanelSemana.setBounds(240, 10, 250, 545);
         this.add(miPanelSemana);
 
+
         // Configuración de la ventana
         this.setTitle("Sistema de tareas - TareaMaster");
         this.setSize(1000, 600);
@@ -59,6 +60,12 @@ public class VentanaPrincipal extends JFrame {
     public void crearDialogoCalendario()
     {
         miDialogoCalendario = new DialogoJunio();
+    }
+
+    // Crear Dialogo Agregar Tarea
+    public void crearDialogoAgregarTarea()
+    {
+        miPanelAgregarTarea = new PanelAgregarTarea();
     }
 
     // Dialogo Vista Calendario

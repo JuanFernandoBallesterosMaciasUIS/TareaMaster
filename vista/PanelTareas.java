@@ -21,6 +21,7 @@ public class PanelTareas extends JPanel{
     private JButton btCategoria4;
     private JButton btCategoria5;
     private JButton btCategoria6;
+    
     private JButton btModificarNombreCategoria;
 
     public PanelTareas() {
