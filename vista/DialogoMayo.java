@@ -3,12 +3,14 @@ package vista;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DialogoMayo extends JPanel {
@@ -59,6 +61,13 @@ public class DialogoMayo extends JPanel {
             calendario[dia].setText("" + (dia + 1));
             calendario[dia].setHorizontalAlignment(SwingConstants.LEFT); // Alineación horizontal
             calendario[dia].setVerticalAlignment(SwingConstants.TOP); // Alineación vertical
+            calendario[dia].addActionListener(new ActionListener() {
+                // Mostrar ventana al hacer clic en el botón
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    mostrarVentana();
+                }
+            });
             this.add(calendario[dia]);
         
             x += 120;
@@ -105,6 +114,22 @@ public class DialogoMayo extends JPanel {
         this.setVisible(true);
         
     }
+
+    private void mostrarVentana() {
+        JDialog ventana = new JDialog();
+        ventana.setTitle("Ventana de botón");
+        ventana.setSize(600, 400);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        ventana.setVisible(true);
+
+        // Mostrar el DialogoVistaDatosDia
+        DialogoVistaDatosJunioDia dialogo = new DialogoVistaDatosJunioDia();
+        ventana.add(dialogo);
+
+
+    }
+
 
     //Metodos de acceso
 

@@ -1,11 +1,10 @@
 package vista;
 
-import java.awt.BorderLayout;
-
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import java.awt.BorderLayout;
 
-public class DialogoVistaDatosDia extends JPanel{
+public class DialogoVistaDatosMayoDia extends JPanel {
     // Atributos
     private JTabbedPane tabbedPane;
     private DialogoDiasCategorias diasCategorias1;
@@ -16,13 +15,17 @@ public class DialogoVistaDatosDia extends JPanel{
     private DialogoDiasCategorias diasCategorias6;
 
 
-    public DialogoVistaDatosDia()
-    {
+    public DialogoVistaDatosMayoDia() {
         //Definición del layout del Dialogo
         this.setLayout(new BorderLayout());
 
-        // Crear instancia de diasCategorias
+        // Crear instancias de diasCategorias
         diasCategorias1 = new DialogoDiasCategorias();
+        diasCategorias2 = new DialogoDiasCategorias();
+        diasCategorias3 = new DialogoDiasCategorias();
+        diasCategorias4 = new DialogoDiasCategorias();
+        diasCategorias5 = new DialogoDiasCategorias();
+        diasCategorias6 = new DialogoDiasCategorias();
 
         // Crear y agregar JTabbedPane
         tabbedPane = new JTabbedPane();
@@ -33,15 +36,6 @@ public class DialogoVistaDatosDia extends JPanel{
         tabbedPane.addTab("Categoria 5", null, diasCategorias5, "Información de las tareas");
         tabbedPane.addTab("Categoria 6", null, diasCategorias6, "Información de las tareas");
 
-
         this.add(tabbedPane, BorderLayout.CENTER);
-        this.add(tabbedPane, BorderLayout.CENTER);
-        this.add(tabbedPane, BorderLayout.CENTER);
-        this.add(tabbedPane, BorderLayout.CENTER);
-        this.add(tabbedPane, BorderLayout.CENTER);
-        this.add(tabbedPane, BorderLayout.CENTER);
-
     }
-
-    
 }

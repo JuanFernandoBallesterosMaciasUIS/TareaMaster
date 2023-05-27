@@ -60,6 +60,7 @@ public class DialogoJunio extends JPanel {
             calendario[dia].setHorizontalAlignment(SwingConstants.LEFT); // Alineación horizontal
             calendario[dia].setVerticalAlignment(SwingConstants.TOP); // Alineación vertical
             calendario[dia].addActionListener(new ActionListener() {
+                // Mostrar ventana al hacer clic en el botón
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     mostrarVentana();
@@ -121,7 +122,7 @@ public class DialogoJunio extends JPanel {
         ventana.setVisible(true);
 
         // Mostrar el DialogoVistaDatosDia
-        DialogoVistaDatosDia dialogo = new DialogoVistaDatosDia();
+        DialogoVistaDatosJunioDia dialogo = new DialogoVistaDatosJunioDia();
         ventana.add(dialogo);
 
 
