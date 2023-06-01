@@ -13,6 +13,7 @@ public class VentanaPrincipal extends JFrame {
     public DialogoVistaCalenda miDialogoVistaCalenda;
     public DialogoJunio miDialogoCalendario;
     public DialogoCategoria miDialogoCategoria;
+    public DialogoInfoSemana miDialogoInfoSemana;
 
     public PanelCalendario miPanelCalendario;
     public PanelSemana miPanelSemana;
@@ -55,6 +56,12 @@ public class VentanaPrincipal extends JFrame {
         this.addWindowListener(windowAdapter);
     }
 
+    // Dialogo Categoria
+    public void crearDialogoCategoria()
+    {
+        miDialogoCategoria = new DialogoCategoria();
+    }
+
     //Crear Dialogo AgregarVendedor
     public void crearDialogoCalendario()
     {
@@ -67,11 +74,14 @@ public class VentanaPrincipal extends JFrame {
         miDialogoVistaCalenda = new DialogoVistaCalenda();
     }
 
-    // Dialogo Categoria
-    public void crearDialogoCategoria()
+    // Dialogo Info Semana
+    public void crearDialogoInfoSemana()
     {
-        miDialogoCategoria = new DialogoCategoria();
+        miDialogoInfoSemana = new DialogoInfoSemana();
+        miDialogoInfoSemana.pack(); // Esto ajusta el tamaño del diálogo para acomodar sus subcomponentes
+        miDialogoInfoSemana.setVisible(true); // Esto muestra el diálogo
     }
+
 
 
 }

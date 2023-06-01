@@ -22,6 +22,7 @@ public class Controlador implements ActionListener
         this.vistaPrincipal = pVistaPrincipal;
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
         this.vistaPrincipal.miPanelTareas.addOyente(this);
+        this.vistaPrincipal.miPanelSemana.agregarOyenteBoton(this);
 
     }
     // Métodos para interactuar entre el sistemaDeTareas y la vista
@@ -31,13 +32,55 @@ public class Controlador implements ActionListener
     {
         String comando = ae.getActionCommand();
 
-        //Abrir ventana Agregar vendedor
+        //Abrir ventana de los calendarios
         if(comando.equals("calendario"))
         {
             vistaPrincipal.crearDialogoVistaCalenda();
             
         }
 
+        //Abrir ventana de Lunes
+        if(comando.equals("lunes"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Martes
+        if(comando.equals("martes"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Miercoles
+        if(comando.equals("miercoles"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Jueves
+        if(comando.equals("jueves"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Viernes
+        if(comando.equals("viernes"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Sabado
+        if(comando.equals("sabado"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Domingo
+        if(comando.equals("domingo"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+        
         //Abrir ventana Editar Categoria
         if(comando.equals("modificarCategorias"))
         {

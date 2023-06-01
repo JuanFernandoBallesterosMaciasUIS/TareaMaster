@@ -40,6 +40,7 @@ public class PanelSemana extends JPanel{
         btLunes = new JButton("Lunes");
         btLunes.setFont(new Font("Verdana", Font.BOLD, 15));
         btLunes.setBounds(40, 90, 180, 40);
+        btLunes.setActionCommand("lunes");
         this.add(btLunes);
         // color del boton
         btLunes.setBackground(Color.decode("#092c86"));
@@ -50,6 +51,7 @@ public class PanelSemana extends JPanel{
         btMartes = new JButton("Martes");
         btMartes.setFont(new Font("Verdana", Font.BOLD, 15));
         btMartes.setBounds(40, 140, 180, 40);
+        btMartes.setActionCommand("martes");
         this.add(btMartes);
         btMartes.setBackground(Color.decode("#092c86"));
         btMartes.setForeground(Color.WHITE);
@@ -59,6 +61,7 @@ public class PanelSemana extends JPanel{
         btMiercoles = new JButton("Miercoles");
         btMiercoles.setFont(new Font("Verdana", Font.BOLD, 15));
         btMiercoles.setBounds(40, 190, 180, 40);
+        btMiercoles.setActionCommand("miercoles");
         this.add(btMiercoles);
         btMiercoles.setBackground(Color.decode("#092c86"));
         btMiercoles.setForeground(Color.WHITE);
@@ -68,6 +71,7 @@ public class PanelSemana extends JPanel{
         btJueves = new JButton("Jueves");
         btJueves.setFont(new Font("Verdana", Font.BOLD, 15));
         btJueves.setBounds(40, 240, 180, 40);
+        btJueves.setActionCommand("jueves");
         this.add(btJueves);
         btJueves.setBackground(Color.decode("#092c86"));
         btJueves.setForeground(Color.WHITE);
@@ -77,6 +81,7 @@ public class PanelSemana extends JPanel{
         btViernes = new JButton("Viernes");
         btViernes.setFont(new Font("Verdana", Font.BOLD, 15));
         btViernes.setBounds(40, 290, 180, 40);
+        btViernes.setActionCommand("viernes");
         this.add(btViernes);
         btViernes.setBackground(Color.decode("#092c86"));
         btViernes.setForeground(Color.WHITE);
@@ -86,6 +91,7 @@ public class PanelSemana extends JPanel{
         btSabado = new JButton("Sabado");
         btSabado.setFont(new Font("Verdana", Font.BOLD, 15));
         btSabado.setBounds(40, 340, 180, 40);
+        btSabado.setActionCommand("sabado");
         this.add(btSabado);
         btSabado.setBackground(Color.decode("#092c86"));
         btSabado.setForeground(Color.WHITE);
@@ -95,6 +101,7 @@ public class PanelSemana extends JPanel{
         btDomingo = new JButton("Domingo");
         btDomingo.setFont(new Font("Verdana", Font.BOLD, 15));
         btDomingo.setBounds(40, 390, 180, 40);
+        btDomingo.setActionCommand("domingo");
         this.add(btDomingo);
         btDomingo.setBackground(Color.decode("#092c86"));
         btDomingo.setForeground(Color.WHITE);
@@ -105,5 +112,35 @@ public class PanelSemana extends JPanel{
         
     }
 
+    // Metodos de acceso de cada boton
+    public void agregarOyentesBotones(ActionListener pAL)
+    {
+        btLunes.addActionListener(pAL);
+        btMartes.addActionListener(pAL);
+        btMiercoles.addActionListener(pAL);
+        btJueves.addActionListener(pAL);
+        btViernes.addActionListener(pAL);
+        btSabado.addActionListener(pAL);
+        btDomingo.addActionListener(pAL);
+        
+    }
+
+    public JButton getBtLunes() 
+    {
+        return btLunes;
+    }
+
+    public void agregarOyenteBoton(ActionListener pAL)
+    {
+        btLunes.addActionListener(pAL);
+        btMartes.addActionListener(pAL);
+        btMiercoles.addActionListener(pAL);
+        btJueves.addActionListener(pAL);
+        btViernes.addActionListener(pAL);
+        btSabado.addActionListener(pAL);
+        btDomingo.addActionListener(pAL);
+    }
+    
     
 }
+
