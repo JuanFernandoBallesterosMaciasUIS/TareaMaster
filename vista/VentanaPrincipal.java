@@ -13,10 +13,11 @@ public class VentanaPrincipal extends JFrame {
     public DialogoVistaCalenda miDialogoVistaCalenda;
     public DialogoJunio miDialogoCalendario;
     public DialogoCategoria miDialogoCategoria;
+    public DialogoInfoSemana miDialogoInfoSemana;
+
     public PanelCalendario miPanelCalendario;
     public PanelSemana miPanelSemana;
     public PanelTareas miPanelTareas;
-    public PanelAgregarTarea miPanelAgregarTarea;
 
     //private PanelTareas panelTareas;
 
@@ -42,7 +43,6 @@ public class VentanaPrincipal extends JFrame {
         miPanelSemana.setBounds(240, 10, 250, 545);
         this.add(miPanelSemana);
 
-
         // Configuración de la ventana
         this.setTitle("Sistema de tareas - TareaMaster");
         this.setSize(1000, 600);
@@ -56,21 +56,17 @@ public class VentanaPrincipal extends JFrame {
         this.addWindowListener(windowAdapter);
     }
 
+    // Dialogo Categoria
+    public void crearDialogoCategoria()
+    {
+        miDialogoCategoria = new DialogoCategoria();
+    }
+
     //Crear Dialogo AgregarVendedor
     public void crearDialogoCalendario()
     {
         miDialogoCalendario = new DialogoJunio();
     }
-
-    // Crear Dialogo Agregar Tarea
-    // Suponiendo que 'this' es un JFrame
-    public void crearDialogoAgregarTarea()
-    {
-        miPanelAgregarTarea = new PanelAgregarTarea(this);
-        miPanelAgregarTarea.setVisible(true);
-    }
-
-
 
     // Dialogo Vista Calendario
     public void crearDialogoVistaCalenda()
@@ -78,11 +74,14 @@ public class VentanaPrincipal extends JFrame {
         miDialogoVistaCalenda = new DialogoVistaCalenda();
     }
 
-    // Dialogo Categoria
-    public void crearDialogoCategoria()
+    // Dialogo Info Semana
+    public void crearDialogoInfoSemana()
     {
-        miDialogoCategoria = new DialogoCategoria();
+        miDialogoInfoSemana = new DialogoInfoSemana();
+        miDialogoInfoSemana.pack(); // Esto ajusta el tamaño del diálogo para acomodar sus subcomponentes
+        miDialogoInfoSemana.setVisible(true); // Esto muestra el diálogo
     }
+
 
 
 }

@@ -14,11 +14,7 @@ public class Test {
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
         Controlador controlador = new Controlador(ventanaPrincipal, sistemaDeTareas);
     
-        
 
-        
-
-        
 
         ventanaPrincipal.addWindowClosingListener(new WindowAdapter() {
             @Override

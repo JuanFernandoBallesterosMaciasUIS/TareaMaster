@@ -21,7 +21,7 @@ public class Controlador implements ActionListener
         this.sistemaDeTareas = pSistemaDeTareas;
         this.vistaPrincipal = pVistaPrincipal;
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
-        this.vistaPrincipal.miPanelTareas.agregarOyenteBoton(this);
+        this.vistaPrincipal.miPanelTareas.addOyente(this);
 
 
     }
@@ -32,13 +32,54 @@ public class Controlador implements ActionListener
     {
         String comando = ae.getActionCommand();
 
-        //Abrir ventana Agregar vendedor
+        //Abrir ventana de los calendarios
         if(comando.equals("calendario"))
         {
             vistaPrincipal.crearDialogoVistaCalenda();
             
         }
+        //Abrir ventana de Lunes
+        if(comando.equals("lunes"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
 
+        //Abrir ventana de Martes
+        if(comando.equals("martes"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Miercoles
+        if(comando.equals("miercoles"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Jueves
+        if(comando.equals("jueves"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Viernes
+        if(comando.equals("viernes"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Sabado
+        if(comando.equals("sabado"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+
+        //Abrir ventana de Domingo
+        if(comando.equals("domingo"))
+        {
+            vistaPrincipal.crearDialogoInfoSemana();
+        }
+        
         //Abrir ventana Editar Categoria
         if(comando.equals("modificarCategorias"))
         {
@@ -54,14 +95,6 @@ public class Controlador implements ActionListener
             vistaPrincipal.miPanelTareas.cambiarNombreCategoria(nombreCategoria + 1, nombreNuevo);
             vistaPrincipal.miDialogoCategoria.editarCategoria2();
             vistaPrincipal.miDialogoCategoria.dispose();
-        }
-
-        //Agregar tarea
-        if(comando.equals("Categoria1"))
-        {
-
-            vistaPrincipal.crearDialogoAgregarTarea();
-
         }
 
     
