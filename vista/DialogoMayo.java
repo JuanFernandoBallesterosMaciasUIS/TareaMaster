@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -34,23 +35,12 @@ public class DialogoMayo extends JPanel {
         //Crear y agregar area de texto con un borde llamado Tareas no realizadas
         TareasSinHacer = new JTextArea();
         TareasSinHacer.setBounds(30, 90, 200, 300);
-        TareasSinHacer.setBorder(BorderFactory.createTitledBorder("Tareas no realizadas"));
+        // se agrega el tipode letra 
+        TareasSinHacer.setBorder(BorderFactory.createTitledBorder(null, " Tareas no realizadas", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Arial", Font.BOLD, 17), Color.decode("#21588A")));
+        TareasSinHacer.setFont(new Font("Arial", Font.PLAIN, 15));
         // se agrega el color del panel 
         TareasSinHacer.setBackground(Color.decode("#D4D7E9"));
         this.add(TareasSinHacer);
-
-        //Creación del botón del mes anterior
-        btMesAnterior = new JButton("Mes anterior");
-        btMesAnterior.setFont(new Font("Verdana", Font.BOLD, 12));
-        btMesAnterior.setBounds(320, 500, 130, 20);
-        this.add(btMesAnterior);
-
-        //Creación del botón del mes siguiente
-        btMesSiguiente = new JButton("Mes siguiente");
-        btMesSiguiente.setFont(new Font("Verdana", Font.BOLD, 12));
-        btMesSiguiente.setBounds(920, 500, 130, 20);
-        this.add(btMesSiguiente);
-
 
         // Creacion del calendario como una matriz de botones que cada boton muestre el numero del dia hasta 31 botones
         JButton[] calendario = new JButton[31];
@@ -80,16 +70,39 @@ public class DialogoMayo extends JPanel {
             }
         }
 
-        // Creacion de los labels de los dias de la semana 
+        // Creacion de los labels de los dias de la semana
+
         JLabel[] diasSemana = new JLabel[7];
         diasSemana[0] = new JLabel("Lunes");
+        diasSemana[0].setForeground(Color.decode("#29547b"));
+        diasSemana[0].setFont(new Font("Verdana", Font.BOLD,17));
+
         diasSemana[1] = new JLabel("Martes");
+        diasSemana[1].setForeground(Color.decode("#29547b"));
+        diasSemana[1].setFont(new Font("Verdana", Font.BOLD,17));
+
         diasSemana[2] = new JLabel("Miercoles");
+        diasSemana[2].setForeground(Color.decode("#29547b"));
+        diasSemana[2].setFont(new Font("Arial", Font.BOLD,17 ));
+
         diasSemana[3] = new JLabel("Jueves");
+        diasSemana[3].setForeground(Color.decode("#29547b"));
+        diasSemana[3].setFont(new Font("Arial", Font.BOLD,17 ));
+
         diasSemana[4] = new JLabel("Viernes");
+        diasSemana[4].setForeground(Color.decode("#29547b"));
+        diasSemana[4].setFont(new Font("Arial", Font.BOLD,17));
+
         diasSemana[5] = new JLabel("Sabado");
+        diasSemana[5].setForeground(Color.decode("#29547b"));
+        diasSemana[5].setFont(new Font("Arial", Font.BOLD,17 ));
+
         diasSemana[6] = new JLabel("Domingo");
-        diasSemana[0].setBounds(250, 70,120, 20);
+        diasSemana[6].setForeground(Color.decode("#29547b"));
+        diasSemana[6].setFont(new Font("Arial", Font.BOLD,17 ));
+
+        // se agregan el tamaño y la posicion de los labels
+        diasSemana[0].setBounds(255, 70,120, 20);
         diasSemana[1].setBounds(370, 70, 120, 20);
         diasSemana[2].setBounds(490, 70, 120, 20);
         diasSemana[3].setBounds(610, 70, 120, 20);
@@ -105,13 +118,11 @@ public class DialogoMayo extends JPanel {
         this.add(diasSemana[6]);
 
         // Creacion del label del mes de Junio 
-        JLabel mes = new JLabel("- Mayo -"); // Creación del label
-        // color de la letra
-        mes.setForeground(Color.decode("#092c86"));
-        mes.setBounds(500, 20, 120, 40); // Ajusta la posición del label
-        // Ajusta el tamaño de la fuente
-        mes.setFont(new Font("Arial", Font.PLAIN, 30));
-        this.add(mes); // Agrega el label a la ventana
+        JLabel mes = new JLabel("Mayo"); 
+        mes.setFont(new Font("Arial Black", Font.PLAIN, 38));
+        mes.setForeground(Color.decode("#0B5794"));
+        mes.setBounds(500, 20, 120, 40); 
+        this.add(mes); 
 
         //Caracteristicas de la ventana , nombre , tamaño , posicion , no redimensionable y visible
         this.setSize(1150,570);

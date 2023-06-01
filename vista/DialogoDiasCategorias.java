@@ -13,7 +13,7 @@ public class DialogoDiasCategorias extends JPanel {
     public DialogoDiasCategorias() {
         // Crear instancia de tareasIncompletas
         tareasIncompletas = new JTextArea();
-        tareasIncompletas.setBorder(BorderFactory.createTitledBorder("Tareas por hacer"));
+        tareasIncompletas.setBorder(BorderFactory.createTitledBorder("Tareas  por hacer"));
         
         // Establecer el tamaño preferido del JTextArea
         tareasIncompletas.setPreferredSize(new Dimension(400, 300));
