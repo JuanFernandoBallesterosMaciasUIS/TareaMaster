@@ -18,6 +18,7 @@ public class VentanaPrincipal extends JFrame {
     public PanelCalendario miPanelCalendario;
     public PanelSemana miPanelSemana;
     public PanelTareas miPanelTareas;
+    public PanelAgregarTarea miPanelAgregarTarea;
 
     //private PanelTareas panelTareas;
 
@@ -59,7 +60,7 @@ public class VentanaPrincipal extends JFrame {
     // Crear Dialogo PanelAgregarTarea
     public void crearDialogoAgregarTarea()
     {
-        miDialogoCategoria = new DialogoCategoria();
+        miPanelAgregarTarea = new PanelAgregarTarea(this);
     }
 
     // Dialogo Categoria
