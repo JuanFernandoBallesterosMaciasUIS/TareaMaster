@@ -37,6 +37,8 @@ public class PanelAgregarTarea extends JDialog {
 
         // Definiendo el layout
         this.setLayout(null);
+        this.setSize(400, 300);  // Asigna el tamaño de la ventana a 300x300
+        this.setLocationRelativeTo(null); // Centra la ventana en la pantalla
 
         // Configuración del panel
         this.setBackground(Color.decode ("#D4D7E9"));
@@ -52,7 +54,7 @@ public class PanelAgregarTarea extends JDialog {
         // Configuración de los botones
         btAgregarTarea = new JButton("Agregar Tarea");
         btAgregarTarea.setFont(new Font("Verdana", Font.BOLD, 15));
-        btAgregarTarea.setBounds(100, 120, 100, 25);
+        btAgregarTarea.setBounds(130, 160, 180, 25);
         btAgregarTarea.setActionCommand("agregarTarea");
         this.add(btAgregarTarea);
 
@@ -64,7 +66,7 @@ public class PanelAgregarTarea extends JDialog {
 
         lbDescripcion = new JLabel("Descripcion:");
         lbDescripcion.setFont(new Font("Verdana", Font.BOLD, 15));
-        lbDescripcion.setBounds(49, 60, 100, 25);
+        lbDescripcion.setBounds(49, 60, 120, 25);
         this.add(lbDescripcion);
 
         lbPrioridad = new JLabel("Prioridad:");
@@ -79,22 +81,22 @@ public class PanelAgregarTarea extends JDialog {
 
         // Configuración de los text
         txtTitulo = new JTextArea();
-        txtTitulo.setBounds(130, 30, 120, 25);
+        txtTitulo.setBounds(170, 30, 120, 25);
         txtTitulo.setFont(new Font("Arial", Font.PLAIN, 15));
         this.add(txtTitulo);
 
         txtDescripcion = new JTextArea();
-        txtDescripcion.setBounds(130, 60, 120, 25);
+        txtDescripcion.setBounds(170, 60, 120, 25);
         txtDescripcion.setFont(new Font("Arial", Font.PLAIN, 15));
         this.add(txtDescripcion);
 
         txtPrioridad = new JTextArea();
-        txtPrioridad.setBounds(130, 90, 120, 25);
+        txtPrioridad.setBounds(170, 90, 120, 25);
         txtPrioridad.setFont(new Font("Arial", Font.PLAIN, 15));
         this.add(txtPrioridad);
 
         txtPlazo = new JTextArea();
-        txtPlazo.setBounds(130, 120, 120, 25);
+        txtPlazo.setBounds(170, 120, 120, 25);
         txtPlazo.setFont(new Font("Arial", Font.PLAIN, 15));
         this.add(txtPlazo);
 

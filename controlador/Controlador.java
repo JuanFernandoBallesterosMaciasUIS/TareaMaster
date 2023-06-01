@@ -21,7 +21,8 @@ public class Controlador implements ActionListener
         this.sistemaDeTareas = pSistemaDeTareas;
         this.vistaPrincipal = pVistaPrincipal;
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
-        this.vistaPrincipal.miPanelTareas.addOyente(this);
+        this.vistaPrincipal.miPanelTareas.agregarOyenteBoton(this);
+
 
     }
     // Métodos para interactuar entre el sistemaDeTareas y la vista

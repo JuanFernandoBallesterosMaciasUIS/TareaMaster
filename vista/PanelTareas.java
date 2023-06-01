@@ -170,7 +170,7 @@ public class PanelTareas extends JPanel{
 
 
     // Método para agregar oyentes a los botones
-    public void addOyente(ActionListener pAL) {
+    public void agregarOyenteBoton(ActionListener pAL) {
         btCategoria1.addActionListener(pAL);
         btCategoria2.addActionListener(pAL);
         btCategoria3.addActionListener(pAL);
