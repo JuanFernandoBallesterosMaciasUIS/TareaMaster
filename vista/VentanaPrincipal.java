@@ -56,6 +56,12 @@ public class VentanaPrincipal extends JFrame {
         this.addWindowListener(windowAdapter);
     }
 
+    // Crear Dialogo PanelAgregarTarea
+    public void crearDialogoAgregarTarea()
+    {
+        miDialogoCategoria = new DialogoCategoria();
+    }
+
     // Dialogo Categoria
     public void crearDialogoCategoria()
     {

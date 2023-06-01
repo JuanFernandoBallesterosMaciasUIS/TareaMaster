@@ -21,7 +21,8 @@ public class Controlador implements ActionListener
         this.sistemaDeTareas = pSistemaDeTareas;
         this.vistaPrincipal = pVistaPrincipal;
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
-        this.vistaPrincipal.miPanelTareas.addOyente(this);
+        this.vistaPrincipal.miPanelTareas.agregarOyenteBoton(this);
+        this.vistaPrincipal.miPanelSemana.agregarOyentesBotones(this);
 
 
     }
@@ -38,6 +39,13 @@ public class Controlador implements ActionListener
             vistaPrincipal.crearDialogoVistaCalenda();
             
         }
+
+        // Abrir Agregar Tarea
+        if(comando.equals("Categoria1"))
+        {
+            vistaPrincipal.crearDialogoAgregarTarea();
+        }
+
         //Abrir ventana de Lunes
         if(comando.equals("lunes"))
         {
