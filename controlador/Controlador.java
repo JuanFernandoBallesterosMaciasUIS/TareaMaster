@@ -23,8 +23,7 @@ public class Controlador implements ActionListener
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
         this.vistaPrincipal.miPanelTareas.agregarOyenteBoton(this);
         this.vistaPrincipal.miPanelSemana.agregarOyentesBotones(this);
-
-
+        
     }
     // Métodos para interactuar entre el sistemaDeTareas y la vista
 
@@ -40,11 +39,34 @@ public class Controlador implements ActionListener
             
         }
 
-        // Abrir Agregar Tarea
+        // Abrir Agregar Tarea categoria 1
         if(comando.equals("Categoria1"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
         }
+        if(comando.equals("Categoria2"))
+        {
+            vistaPrincipal.crearDialogoAgregarTarea();
+        }
+        if(comando.equals("Categoria3"))
+        {
+            vistaPrincipal.crearDialogoAgregarTarea();
+        }
+        if(comando.equals("Categoria4"))
+        {
+            vistaPrincipal.crearDialogoAgregarTarea();
+        }
+        if(comando.equals("Categoria5"))
+        {
+            vistaPrincipal.crearDialogoAgregarTarea();
+        }
+        if(comando.equals("Categoria6"))
+        {
+            vistaPrincipal.crearDialogoAgregarTarea();
+        }
+       
+
+        
 
         //Abrir ventana de Lunes
         if(comando.equals("lunes"))

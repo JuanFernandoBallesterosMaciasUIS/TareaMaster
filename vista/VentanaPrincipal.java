@@ -58,10 +58,11 @@ public class VentanaPrincipal extends JFrame {
     }
 
     // Crear Dialogo PanelAgregarTarea
-    public void crearDialogoAgregarTarea()
-    {
-        miPanelAgregarTarea = new PanelAgregarTarea(this);
+    public void crearDialogoAgregarTarea() {
+        PanelAgregarTarea dialogo = new PanelAgregarTarea();
+        dialogo.setVisible(true);
     }
+    
 
     // Dialogo Categoria
     public void crearDialogoCategoria()

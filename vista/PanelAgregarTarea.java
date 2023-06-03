@@ -31,9 +31,9 @@ public class PanelAgregarTarea extends JDialog {
 
     private JButton btAgregarTarea;
 
-    public PanelAgregarTarea(JFrame owner) {
+    public PanelAgregarTarea() {
 
-        super(owner, "Agregar Tarea", true);
+        super((JFrame)null, "Agregar Tarea", true);
 
         // Definiendo el layout
         this.setLayout(null);
@@ -47,9 +47,6 @@ public class PanelAgregarTarea extends JDialog {
         Font font = new Font("Arial", Font.BOLD, 17); 
         
         TitledBorder border = BorderFactory.createTitledBorder(null, "Agregar Tarea", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, font, Color.decode("#20124D"));
-
-        // Asignar el borde personalizado al panel
-        //this.setBorder(border);
 
         // Configuración de los botones
         btAgregarTarea = new JButton("Agregar Tarea");
@@ -99,8 +96,6 @@ public class PanelAgregarTarea extends JDialog {
         txtPlazo.setBounds(170, 120, 120, 25);
         txtPlazo.setFont(new Font("Arial", Font.PLAIN, 15));
         this.add(txtPlazo);
-
-     
     }
 
     public void agregarOyenteBoton(ActionListener pAL)
