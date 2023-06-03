@@ -98,6 +98,29 @@ public class PanelAgregarTarea extends JDialog {
         this.add(txtPlazo);
     }
 
+    // metodos de acceso
+    public String getTxtTitulo()
+    {
+        return txtTitulo.getText();
+    }
+
+    public String getTxtDescripcion()
+    {
+        return txtDescripcion.getText();
+    }
+
+    public String getTxtPrioridad()
+    {
+        return txtPrioridad.getText();
+    }
+
+    public String getTxtPlazo()
+    {
+        return txtPlazo.getText();
+    }
+
+    
+
     public void agregarOyenteBoton(ActionListener pAL)
     {
         btAgregarTarea.addActionListener(pAL);

@@ -23,6 +23,7 @@ public class Controlador implements ActionListener
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
         this.vistaPrincipal.miPanelTareas.agregarOyenteBoton(this);
         this.vistaPrincipal.miPanelSemana.agregarOyentesBotones(this);
+        this.vistaPrincipal.miPanelAgregarTarea.agregarOyenteBoton(this);
         
     }
     // Métodos para interactuar entre el sistemaDeTareas y la vista
@@ -63,6 +64,20 @@ public class Controlador implements ActionListener
         if(comando.equals("Categoria6"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+        }
+
+        //Agregar Tarea
+        if(comando.equals("agregarTarea"))
+        {
+            String titulo = vistaPrincipal.miPanelAgregarTarea.getTxtTitulo();
+            String descripcion = vistaPrincipal.miPanelAgregarTarea.getTxtDescripcion();
+            String prioridad = vistaPrincipal.miPanelAgregarTarea.getTxtPrioridad();
+            String plazo = vistaPrincipal.miPanelAgregarTarea.getTxtPlazo();
+            int categoria = vistaPrincipal.miPanelAgregarTarea.getCbCategoria();
+            Tarea nuevaTarea = new Tarea(titulo, descripcion, prioridad, plazo, categoria);
+            sistemaDeTareas.agregarTarea(nuevaTarea);
+            vistaPrincipal.miPanelAgregarTarea.agregarTarea2();
+            vistaPrincipal.miPanelAgregarTarea.dispose();
         }
        
 
