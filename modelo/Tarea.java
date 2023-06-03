@@ -15,4 +15,5 @@ public class Tarea implements Serializable {
 
     // Constructor, getters y setters
     
+    
 }

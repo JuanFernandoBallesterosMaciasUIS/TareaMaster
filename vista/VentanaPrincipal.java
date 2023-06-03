@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 
 import java.awt.Panel;
 import java.awt.event.WindowAdapter;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 
 public class VentanaPrincipal extends JFrame {
@@ -44,12 +46,29 @@ public class VentanaPrincipal extends JFrame {
         miPanelSemana.setBounds(240, 10, 250, 545);
         this.add(miPanelSemana);
 
+        // Configura el comportamiento de cierre por defecto
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+        // Agrega un WindowListener
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                miPanelCalendario.guardarTexto();
+                System.exit(0);
+            }
+        });
+    
+
         // Configuración de la ventana
         this.setTitle("Sistema de tareas - TareaMaster");
         this.setSize(1000, 600);
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Modificado para poder guardar antes de cerrar
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
+        
+        //En este código, setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE) indica que cuando haces clic en el botón 'x', no se debe hacer nada de inmediato. Luego, en el WindowAdapter, sobrescribes el método windowClosing para que guarde el
+
         
     }
 
@@ -88,6 +107,7 @@ public class VentanaPrincipal extends JFrame {
         miDialogoInfoSemana.pack(); // Esto ajusta el tamaño del diálogo para acomodar sus subcomponentes
         miDialogoInfoSemana.setVisible(true); // Esto muestra el diálogo
     }
+    
 
 
 
