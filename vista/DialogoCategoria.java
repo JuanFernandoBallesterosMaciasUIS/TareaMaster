@@ -5,7 +5,11 @@ import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.BorderFactory;
 
+import java.awt.Color;
+
+//import java.awt.Color;
 import java.awt.Label;
 import java.awt.event.ActionListener;
 
@@ -45,6 +49,11 @@ public class DialogoCategoria extends JDialog {
         btEditarCategoria.setFont(new Font("Verdana", Font.BOLD, 15));
         btEditarCategoria.setBounds(100, 120, 100, 25);
         btEditarCategoria.setActionCommand("editar");
+        // se agrega color al boton
+        btEditarCategoria.setBackground(Color.decode("#092c86"));
+        btEditarCategoria.setForeground(Color.WHITE);
+        btEditarCategoria.setBorder(BorderFactory.createLineBorder(Color.decode("#101343"), 2));
+
         this.add(btEditarCategoria);
 
         //Creación de la etiqueta categoria-

@@ -78,9 +78,12 @@ public class PanelTareas extends JPanel{
         this.add(btCategoria6);
 
         btModificarNombreCategoria = new JButton("Modificar categorias");
-        btModificarNombreCategoria.setFont(new Font("Arial", Font.BOLD, 15));
+        btModificarNombreCategoria.setFont(new Font("Arial", Font.BOLD, 16));
         btModificarNombreCategoria.setBounds(17, 50, 189, 20);
         btModificarNombreCategoria.setActionCommand("modificarCategorias");
+        // se agrega color de fondo al boton
+        btModificarNombreCategoria.setBackground(Color.decode("#9fc5e8"));
+    
         this.add(btModificarNombreCategoria);
 
 
