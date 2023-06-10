@@ -53,6 +53,9 @@ public class DialogoMayo extends JPanel {
             calendario[dia].setText("" + (dia + 1));
             calendario[dia].setHorizontalAlignment(SwingConstants.LEFT); // Alineación horizontal
             calendario[dia].setVerticalAlignment(SwingConstants.TOP); // Alineación vertical
+            //se le agregan a todos los botos el mismo color y tipo de letra
+            calendario[dia].setBackground(Color.decode("#D4D7E9"));
+            calendario[dia].setFont(new Font("Arial", Font.BOLD,14 ));
             calendario[dia].addActionListener(new ActionListener() {
                 // Mostrar ventana al hacer clic en el botón
                 @Override
