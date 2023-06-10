@@ -38,16 +38,7 @@ public class ListaDeTareas {
         return tareas;
     }
 
-    // Métodos para obtener tareas por categoría
-    public ArrayList<Tarea> getTareasPorCategoria(String categoria) {
-        ArrayList<Tarea> tareasPorCategoria = new ArrayList<>();
-        for (Tarea tarea : tareas) {
-            if (tarea.getCategoria().equals(categoria)) {
-                tareasPorCategoria.add(tarea);
-            }
-        }
-        return tareasPorCategoria;
-    }
+    
 
 
 }

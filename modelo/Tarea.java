@@ -8,20 +8,17 @@ public class Tarea implements Serializable {
     // Atributos
     private String titulo;
     private String descripcion;
-    private String categoria;
-    private int prioridad;
-    private LocalDate plazo;
-    private boolean completada;
+    private String prioridad;
+    private String plazo;
+  
 
     // Constructor, getters y setters
 
-    public Tarea(String titulo, String descripcion, String categoria, int prioridad, LocalDate plazo, boolean completada) {
+    public Tarea(String titulo, String descripcion, String prioridad, String plazo) {
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.categoria = categoria;
         this.prioridad = prioridad;
         this.plazo = plazo;
-        this.completada = completada;
     }
 
     // Getters y setters
@@ -33,21 +30,16 @@ public class Tarea implements Serializable {
         return this.descripcion;
     }
 
-    public String getCategoria() {
-        return this.categoria;
-    }
 
-    public int getPrioridad() {
+    public String getPrioridad() {
         return this.prioridad;
     }
 
-    public LocalDate getPlazo() {
+    public String getPlazo() {
         return this.plazo;
     }
 
-    public boolean getCompletada() {
-        return this.completada;
-    }
+
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -57,21 +49,16 @@ public class Tarea implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
 
-    public void setPrioridad(int prioridad) {
+    public void setPrioridad(String prioridad) {
         this.prioridad = prioridad;
     }
 
-    public void setPlazo(LocalDate plazo) {
+    public void setPlazo(String plazo) {
         this.plazo = plazo;
     }
 
-    public void setCompletada(boolean completada) {
-        this.completada = completada;
-    }
+
 
     // Métodos
 
@@ -80,10 +67,8 @@ public class Tarea implements Serializable {
         return "Tarea{" +
                 "titulo='" + titulo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", categoria='" + categoria + '\'' +
                 ", prioridad=" + prioridad +
                 ", plazo=" + plazo +
-                ", completada=" + completada +
                 '}';
     }
 

@@ -1,5 +1,6 @@
 package controlador;
 
+import modelo.ListaDeTareas;
 import modelo.SistemaDeTareas;
 import modelo.Tarea;
 import vista.VentanaPrincipal;
@@ -26,6 +27,9 @@ public class Controlador implements ActionListener
         this.vistaPrincipal.miPanelAgregarTarea.agregarOyenteBoton(this);
         
     }
+
+    // Crear objeto listaDeTareas 
+    ListaDeTareas listaDeTareas = new ListaDeTareas();
     // Métodos para interactuar entre el sistemaDeTareas y la vista
 
     @Override
@@ -69,15 +73,15 @@ public class Controlador implements ActionListener
         //Agregar Tarea
         if(comando.equals("agregarTarea"))
         {
-            //String titulo = vistaPrincipal.miPanelAgregarTarea.getTxtTitulo();
-            //String descripcion = vistaPrincipal.miPanelAgregarTarea.getTxtDescripcion();
-            //String prioridad = vistaPrincipal.miPanelAgregarTarea.getTxtPrioridad();
-            //String plazo = vistaPrincipal.miPanelAgregarTarea.getTxtPlazo();
-            //int categoria = vistaPrincipal.miPanelAgregarTarea.getCbCategoria();
-            //Tarea nuevaTarea = new Tarea(titulo, descripcion, prioridad, plazo, categoria);
-            //sistemaDeTareas.agregarTarea(nuevaTarea);
-            //vistaPrincipal.miPanelAgregarTarea.agregarTarea2();
-            //vistaPrincipal.miPanelAgregarTarea.dispose();
+            // imprimir en consola
+            System.out.println("Se ha agregado una tarea");
+            String titulo = vistaPrincipal.miPanelAgregarTarea.getTxtTitulo();
+            String descripcion = vistaPrincipal.miPanelAgregarTarea.getTxtDescripcion();
+            String prioridad = vistaPrincipal.miPanelAgregarTarea.getTxtPrioridad();
+            String plazo = vistaPrincipal.miPanelAgregarTarea.getTxtPlazo();
+            Tarea nuevaTarea = new Tarea(titulo, descripcion, prioridad, plazo);
+            listaDeTareas.agregarTarea(nuevaTarea);
+
         }
        
 

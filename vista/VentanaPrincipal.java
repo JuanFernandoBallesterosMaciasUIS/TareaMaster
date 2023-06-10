@@ -27,47 +27,46 @@ public class VentanaPrincipal extends JFrame {
     public VentanaPrincipal() {
 
         // Definiendo el layout
-        this.setLayout(null);
+    this.setLayout(null);
 
-        // Configuración de los paneles
+    // Configuración de los paneles
 
-        //Creación y adición del PanelTareas
-        miPanelTareas = new PanelTareas();
-        miPanelTareas.setBounds(10, 10, 220, 545);
-        this.add(miPanelTareas);
-        
-        //Creación y adición del PanelCalendario
-        miPanelCalendario= new PanelCalendario();
-        miPanelCalendario.setBounds(500, 10, 480, 545);
-        this.add(miPanelCalendario);
-
-        //Creación y adición del PanelSemana
-        miPanelSemana = new PanelSemana();
-        miPanelSemana.setBounds(240, 10, 250, 545);
-        this.add(miPanelSemana);
-
-        // Configura el comportamiento de cierre por defecto
-        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-
-        // Agrega un WindowListener
-        this.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                miPanelCalendario.guardarTexto();
-                System.exit(0);
-            }
-        });
+    //Creación y adición del PanelTareas
+    miPanelTareas = new PanelTareas();
+    miPanelTareas.setBounds(10, 10, 220, 545);
+    this.add(miPanelTareas);
     
+    //Creación y adición del PanelCalendario
+    miPanelCalendario= new PanelCalendario();
+    miPanelCalendario.setBounds(500, 10, 480, 545);
+    this.add(miPanelCalendario);
 
-        // Configuración de la ventana
-        this.setTitle("Sistema de tareas - TareaMaster");
-        this.setSize(1000, 600);
-        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Modificado para poder guardar antes de cerrar
-        this.setLocationRelativeTo(null);
-        this.setVisible(true);
+    //Creación y adición del PanelSemana
+    miPanelSemana = new PanelSemana();
+    miPanelSemana.setBounds(240, 10, 250, 545);
+    this.add(miPanelSemana);
 
-        
-        //En este código, setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE) indica que cuando haces clic en el botón 'x', no se debe hacer nada de inmediato. Luego, en el WindowAdapter, sobrescribes el método windowClosing para que guarde el
+
+
+    // Configura el comportamiento de cierre por defecto
+    this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+    // Agrega un WindowListener
+    this.addWindowListener(new WindowAdapter() {
+        @Override
+        public void windowClosing(WindowEvent e) {
+            miPanelCalendario.guardarTexto();
+            System.exit(0);
+        }
+    });
+
+    // Configuración de la ventana
+    this.setTitle("Sistema de tareas - TareaMaster");
+    this.setSize(1000, 600);
+    this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Modificado para poder guardar antes de cerrar
+    this.setLocationRelativeTo(null);
+    this.setVisible(true);
+    
+    //En este código, setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE) indica que cuando haces clic en el botón 'x', no se debe hacer nada de inmediato. Luego, en el WindowAdapter, sobrescribes el método windowClosing para que guarde el
 
         
     }
@@ -81,6 +80,8 @@ public class VentanaPrincipal extends JFrame {
         PanelAgregarTarea dialogo = new PanelAgregarTarea();
         dialogo.setVisible(true);
     }
+    
+    
     
 
     // Dialogo Categoria
@@ -108,8 +109,5 @@ public class VentanaPrincipal extends JFrame {
         miDialogoInfoSemana.pack(); // Esto ajusta el tamaño del diálogo para acomodar sus subcomponentes
         miDialogoInfoSemana.setVisible(true); // Esto muestra el diálogo
     }
-    
-
-
 
 }
