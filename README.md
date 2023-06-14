@@ -3,7 +3,7 @@
 
 ## Diagrama de clases
 
-![DiagramaClases](DiagramaClases4.png "DiagramaClases")
+![DiagramaClases](DiagramaClases5.png "DiagramaClases")
 
 ##
 
