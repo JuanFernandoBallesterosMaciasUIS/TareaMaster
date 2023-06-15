@@ -61,22 +61,27 @@ public class Controlador implements ActionListener
         if(comando.equals("Categoria2"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+            vistaPrincipal.miDialogoAgregarTarea.agregarOyenteBoton(this);
         }
         if(comando.equals("Categoria3"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+            vistaPrincipal.miDialogoAgregarTarea.agregarOyenteBoton(this);
         }
         if(comando.equals("Categoria4"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+            vistaPrincipal.miDialogoAgregarTarea.agregarOyenteBoton(this);
         }
         if(comando.equals("Categoria5"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+            vistaPrincipal.miDialogoAgregarTarea.agregarOyenteBoton(this);
         }
         if(comando.equals("Categoria6"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+            vistaPrincipal.miDialogoAgregarTarea.agregarOyenteBoton(this);
         }
 
         //Agregar Tarea
