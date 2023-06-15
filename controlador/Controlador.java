@@ -3,14 +3,16 @@ package controlador;
 import modelo.ListaDeTareas;
 import modelo.SistemaDeTareas;
 import modelo.Tarea;
+import vista.PanelAgregarTarea;
 import vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Controlador implements ActionListener 
 {
-    private SistemaDeTareas sistemaDeTareas;
     private VentanaPrincipal vistaPrincipal;
+    private SistemaDeTareas sistemaDeTareas;
+    
 
     //------------------
     //Metodos
@@ -24,7 +26,9 @@ public class Controlador implements ActionListener
         this.vistaPrincipal.miPanelCalendario.agregarOyentesBotones(this);
         this.vistaPrincipal.miPanelTareas.agregarOyenteBoton(this);
         this.vistaPrincipal.miPanelSemana.agregarOyentesBotones(this);
+        vistaPrincipal.miPanelAgregarTarea = new PanelAgregarTarea();
         this.vistaPrincipal.miPanelAgregarTarea.agregarOyenteBoton(this);
+  
         
     }
 
@@ -48,6 +52,9 @@ public class Controlador implements ActionListener
         if(comando.equals("Categoria1"))
         {
             vistaPrincipal.crearDialogoAgregarTarea();
+            vistaPrincipal.miDialogoAgregarTarea.agregarOyenteBoton(this);
+   
+  
         }
         if(comando.equals("Categoria2"))
         {
@@ -71,7 +78,7 @@ public class Controlador implements ActionListener
         }
 
         //Agregar Tarea
-        if(comando.equals("agregarTarea"))
+        if(comando.equals("agregar"))
         {
             // imprimir en consola
             System.out.println("Se ha agregado una tarea");
@@ -81,7 +88,14 @@ public class Controlador implements ActionListener
             String plazo = vistaPrincipal.miPanelAgregarTarea.getTxtPlazo();
             Tarea nuevaTarea = new Tarea(titulo, descripcion, prioridad, plazo);
             listaDeTareas.agregarTarea(nuevaTarea);
+            // Log de la tarea agregada
+            System.out.println("Se ha agregado la tarea " + nuevaTarea.getTitulo());
+        }
 
+        //Abrir ventana de las tareas
+        if(comando.equals("editar2"))
+        {
+            System.out.println("Se ha agregado una tarea");
         }
        
 

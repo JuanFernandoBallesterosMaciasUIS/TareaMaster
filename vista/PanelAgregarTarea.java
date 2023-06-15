@@ -9,8 +9,9 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 
-import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -30,6 +31,7 @@ public class PanelAgregarTarea extends JDialog {
     private JTextArea txtPlazo;
 
     private JButton btAgregarTarea;
+    private JButton btAgregarTarea2;
 
     public PanelAgregarTarea() {
 
@@ -54,6 +56,12 @@ public class PanelAgregarTarea extends JDialog {
         btAgregarTarea.setBounds(130, 160, 180, 25);
         btAgregarTarea.setActionCommand("agregarTarea");
         this.add(btAgregarTarea);
+
+        btAgregarTarea2 = new JButton("Agregar Tarea 2");
+        btAgregarTarea2.setFont(new Font("Verdana", Font.BOLD, 15));
+        btAgregarTarea2.setBounds(130, 190, 180, 25);
+        btAgregarTarea2.setActionCommand("agregarTarea2");
+        this.add(btAgregarTarea2);
 
         // Configuración de los labels
         lbTitulo = new JLabel("Titulo:");
@@ -124,5 +132,6 @@ public class PanelAgregarTarea extends JDialog {
     public void agregarOyenteBoton(ActionListener pAL)
     {
         btAgregarTarea.addActionListener(pAL);
+        btAgregarTarea2.addActionListener(pAL);
     }
 }

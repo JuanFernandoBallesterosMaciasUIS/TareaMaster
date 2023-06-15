@@ -16,6 +16,7 @@ public class VentanaPrincipal extends JFrame {
     public DialogoJunio miDialogoCalendario;
     public DialogoCategoria miDialogoCategoria;
     public DialogoInfoSemana miDialogoInfoSemana;
+    public DialogoAgregarTarea miDialogoAgregarTarea;
 
     public PanelCalendario miPanelCalendario;
     public PanelSemana miPanelSemana;
@@ -76,11 +77,15 @@ public class VentanaPrincipal extends JFrame {
     }
 
     // Crear Dialogo PanelAgregarTarea
-    public void crearDialogoAgregarTarea() {
-        PanelAgregarTarea dialogo = new PanelAgregarTarea();
-        dialogo.setVisible(true);
+    public void crearPanelAgregarTarea() {
+        miPanelAgregarTarea = new PanelAgregarTarea();
     }
     
+
+    // miDialogoAgregarTarea
+    public void crearDialogoAgregarTarea() {
+        miDialogoAgregarTarea = new DialogoAgregarTarea();
+    }
     
     
 
