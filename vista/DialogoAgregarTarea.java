@@ -54,7 +54,7 @@ public class DialogoAgregarTarea extends JDialog {
         //Creación de la etiqueta descripcion
         lbDescripcion = new JLabel("Descripcion:");
         lbDescripcion.setFont(new Font("Verdana", Font.BOLD, 15));
-        lbDescripcion.setBounds(20, 60, 100, 25);
+        lbDescripcion.setBounds(20, 60, 120, 25);
         this.add(lbDescripcion);
 
         //Creación de la etiqueta prioridad
@@ -72,31 +72,32 @@ public class DialogoAgregarTarea extends JDialog {
         //Creación del campo de texto titulo
         txtTitulo = new JTextArea();
         txtTitulo.setFont(new Font("Verdana", Font.BOLD, 15));
-        txtTitulo.setBounds(120, 20, 200, 25);
+        txtTitulo.setBounds(130, 20, 220, 25);
         this.add(txtTitulo);
 
         //Creación del campo de texto descripcion
         txtDescripcion = new JTextArea();
         txtDescripcion.setFont(new Font("Verdana", Font.BOLD, 15));
-        txtDescripcion.setBounds(120, 60, 200, 25);
+        txtDescripcion.setBounds(130, 60, 220, 25);
         this.add(txtDescripcion);
 
         //Creación del campo de texto prioridad
         txtPrioridad = new JTextArea();
         txtPrioridad.setFont(new Font("Verdana", Font.BOLD, 15));
-        txtPrioridad.setBounds(120, 100, 200, 25);
+        txtPrioridad.setBounds(130, 100, 220, 25);
         this.add(txtPrioridad);
 
         //Creación del campo de texto plazo
         txtPlazo = new JTextArea();
         txtPlazo.setFont(new Font("Verdana", Font.BOLD, 15));
-        txtPlazo.setBounds(120, 140, 200, 25);
+        txtPlazo.setBounds(130, 140, 220, 25);
         this.add(txtPlazo);
+
 
         //Creación del botón agregar tarea
         btAgregarTarea = new JButton("Agregar");
         btAgregarTarea.setFont(new Font("Verdana", Font.BOLD, 15));
-        btAgregarTarea.setBounds(100, 180, 100, 25);
+        btAgregarTarea.setBounds(150, 180, 100, 25);
         btAgregarTarea.setActionCommand("agregar");
         // se agrega color al boton
         btAgregarTarea.setBackground(Color.decode("#092c86"));
@@ -107,7 +108,7 @@ public class DialogoAgregarTarea extends JDialog {
 
         // Caracteristicas de la ventana
         this.setTitle("Agregar Tarea");
-        this.setSize(350, 250);
+        this.setSize(400, 250);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -120,7 +121,28 @@ public class DialogoAgregarTarea extends JDialog {
 
     //Metodos de acceso
 
+// metodos de acceso
+    public String getTxtTitulo()
+    {
+        return txtTitulo.getText();
+    }
 
+    public String getTxtDescripcion()
+    {
+        return txtDescripcion.getText();
+    }
+
+    public String getTxtPrioridad()
+    {
+        return txtPrioridad.getText();
+    }
+
+    public String getTxtPlazo()
+    {
+        return txtPlazo.getText();
+    }
+
+    
     
     public void agregarOyenteBoton(ActionListener pAL)
     {

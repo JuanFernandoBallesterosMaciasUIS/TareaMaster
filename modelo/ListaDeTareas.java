@@ -34,11 +34,18 @@ public class ListaDeTareas {
         return tareas.size();
     }
 
+    // Métodos para obtener la lista de tareas 
     public ArrayList<Tarea> getTareas() {
         return tareas;
     }
 
-    
-
-
+    // toString en un formato legible, que cada atributo de la tarea esté en una línea (\n)
+    @Override
+    public String toString() {
+        String lista = "";
+        for (Tarea tarea : tareas) {
+            lista += tarea.toString() + "\n";
+        }
+        return lista;
+    }
 }

@@ -7,6 +7,8 @@ import vista.PanelAgregarTarea;
 import vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+// importa JOptionPane
+import javax.swing.JOptionPane;
 
 public class Controlador implements ActionListener 
 {
@@ -82,14 +84,22 @@ public class Controlador implements ActionListener
         {
             // imprimir en consola
             System.out.println("Se ha agregado una tarea");
-            String titulo = vistaPrincipal.miPanelAgregarTarea.getTxtTitulo();
-            String descripcion = vistaPrincipal.miPanelAgregarTarea.getTxtDescripcion();
-            String prioridad = vistaPrincipal.miPanelAgregarTarea.getTxtPrioridad();
-            String plazo = vistaPrincipal.miPanelAgregarTarea.getTxtPlazo();
+            String titulo = vistaPrincipal.miDialogoAgregarTarea.getTxtTitulo();
+            String descripcion = vistaPrincipal.miDialogoAgregarTarea.getTxtDescripcion();
+            String prioridad = vistaPrincipal.miDialogoAgregarTarea.getTxtPrioridad();
+            String plazo = vistaPrincipal.miDialogoAgregarTarea.getTxtPlazo();
             Tarea nuevaTarea = new Tarea(titulo, descripcion, prioridad, plazo);
             listaDeTareas.agregarTarea(nuevaTarea);
             // Log de la tarea agregada
             System.out.println("Se ha agregado la tarea " + nuevaTarea.getTitulo());
+            // imprimir lista de tareas en consola
+            System.out.println(listaDeTareas.toString());
+
+            // agregar lista de tareas al al textFiel 
+            vistaPrincipal.miPanelCalendario.insertarTexto(listaDeTareas.toString());
+            // utilizar un JOptionPane para mostrar un mensaje de confirmación
+            JOptionPane.showMessageDialog(null, "Se ha agregado la tarea " + nuevaTarea.getTitulo());
+            vistaPrincipal.miDialogoAgregarTarea.dispose();
         }
 
         //Abrir ventana de las tareas

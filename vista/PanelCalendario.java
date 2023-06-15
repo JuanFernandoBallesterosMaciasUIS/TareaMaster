@@ -32,9 +32,12 @@ public class PanelCalendario extends JPanel{
         
 
         //Crear y agregar area de texto Resultados con un borde llamado Tareas
+        // Ademas agregar un desplazamiento vertical y horizontal
         areaTexto = new JTextArea();
         areaTexto.setBounds(10, 350, 460, 190);
-        areaTexto.setBorder(BorderFactory.createTitledBorder(null, "Recomendaciones", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Arial", Font.BOLD, 17), Color.decode("#20124D")));
+        areaTexto.setBorder(BorderFactory.createTitledBorder(null, "Lista de tareas", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Arial", Font.BOLD, 17), Color.decode("#20124D")));
+        areaTexto.setLineWrap(true);
+        areaTexto.setWrapStyleWord(true);
         this.add(areaTexto);
         areaTexto.setBackground(Color.decode ("#e9e9e9"));
 
@@ -88,6 +91,11 @@ public class PanelCalendario extends JPanel{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    // Método para insertar texto en el areaTexto
+    public void insertarTexto(String texto) {
+        areaTexto.append(texto);
     }
 
     // Método para cargar el texto del archivo en el areaTexto
